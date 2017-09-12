@@ -1,40 +1,105 @@
 {
-    "experiments": [
-        {
-            "technique": "AUTOCOMPASTE",
-            "granularity": "sentence",
-            "data_file": "data/texts.json",
-            "stimuli": "What is acceptor atoms?"
-        },
-        {
-            "technique": "AUTOCOMPASTE",
-            "granularity": "paragraph",
-            "data_file": "data/texts.json",
-            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
-        },
-        {
-            "technique": "AUTOCOMPASTE",
-            "granularity": "phrase",
-            "data_file": "data/texts.json",
-            "stimuli": "number of positive charges"
-        },
-        {
-            "technique": "TRADITIONAL",
-            "granularity": "sentence",
-            "data_file": "data/texts.json",
-            "stimuli": "What is acceptor atoms?"
-        },
-        {
-            "technique": "TRADITIONAL",
-            "granularity": "paragraph",
-            "data_file": "data/texts.json",
-            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
-        },
-        {
-            "technique": "TRADITIONAL",
-            "granularity": "phrase",
-            "data_file": "data/texts.json",
-            "stimuli": "number of positive charges"
-        }
+  "experiments": [{
+      "technique": "AUTOCOMPASTE",
+      "granularity": "sentence",
+      "data_file": "data/texts.json",
+      "stimuli": "What is acceptor atoms?"
+    },
+    {
+      "technique": "AUTOCOMPASTE",
+      "granularity": "paragraph",
+      "data_file": "data/texts.json",
+      "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
+    },
+    {
+      "technique": "AUTOCOMPASTE",
+      "granularity": "phrase",
+      "data_file": "data/texts.json",
+      "stimuli": "number of positive charges"
+    },
+    {
+      "technique": "TRADITIONAL",
+      "granularity": "sentence",
+      "data_file": "data/texts.json",
+      "stimuli": "What is acceptor atoms?"
+    },
+    {
+      "technique": "TRADITIONAL",
+      "granularity": "paragraph",
+      "data_file": "data/texts.json",
+      "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
+    },
+    {
+      "technique": "TRADITIONAL",
+      "granularity": "phrase",
+      "data_file": "data/texts.json",
+      "stimuli": "number of positive charges"
+    }
+  ],
+
+  "configurations": [{
+    "blocks": 2,
+    "trials": 3,
+    "conditions": [{
+        "techniques": ["AUTOCOMPASTE", "TRADITIONAL"],
+        "granularities": ["phrase", "sentence", "paragraph"],
+        "corpora": ["small", "large"]
+      },
+      {
+        "techniques": ["AUTOCOMPASTE", "TRADITIONAL"],
+        "granularities": ["phrase", "sentence", "paragraph"],
+        "corpora": ["large", "small"]
+      },
+      {
+        "techniques": ["AUTOCOMPASTE", "TRADITIONAL"],
+        "granularities": ["sentence", "paragraph", "phrase"],
+        "corpora": ["small", "large"]
+      },
+      {
+        "techniques": ["AUTOCOMPASTE", "TRADITIONAL"],
+        "granularities": ["sentence", "paragraph", "phrase"],
+        "corpora": ["large", "small"]
+      },
+      {
+        "techniques": ["AUTOCOMPASTE", "TRADITIONAL"],
+        "granularities": ["paragraph", "phrase", "sentence"],
+        "corpora": ["small", "large"]
+      },
+      {
+        "techniques": ["AUTOCOMPASTE", "TRADITIONAL"],
+        "granularities": ["paragraph", "phrase", "sentence"],
+        "corpora": ["large", "small"]
+      },
+      {
+        "techniques": ["TRADITIONAL", "AUTOCOMPASTE"],
+        "granularities": ["phrase", "sentence", "paragraph"],
+        "corpora": ["small", "large"]
+      },
+      {
+        "techniques": ["TRADITIONAL", "AUTOCOMPASTE"],
+        "granularities": ["phrase", "sentence", "paragraph"],
+        "corpora": ["large", "small"]
+      },
+      {
+        "techniques": ["TRADITIONAL", "AUTOCOMPASTE"],
+        "granularities": ["sentence", "paragraph", "phrase"],
+        "corpora": ["small", "large"]
+      },
+      {
+        "techniques": ["TRADITIONAL", "AUTOCOMPASTE"],
+        "granularities": ["sentence", "paragraph", "phrase"],
+        "corpora": ["large", "small"]
+      },
+      {
+        "techniques": ["TRADITIONAL", "AUTOCOMPASTE"],
+        "granularities": ["paragraph", "phrase", "sentence"],
+        "corpora": ["small", "large"]
+      },
+      {
+        "techniques": ["TRADITIONAL", "AUTOCOMPASTE"],
+        "granularities": ["paragraph", "phrase", "sentence"],
+        "corpora": ["large", "small"]
+      },
     ]
+  }]
 }
