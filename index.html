@@ -31,13 +31,12 @@
         </nav>
 
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-8 col-md-offset-2">
-                    <h1>Welcome!</h1>
+                    <h3>CS4249 Phenomena and Theories of Human-Computer Interaction</h3>
                     <hr>
-                    <p>The startup interface provides the basic instructions to your participants, and also collect input from the participant/experimenter the participant ID so that you can generate the correct data log for a particular experiment session.</p>
-
-                    <p>This is a template. Please write your participant number ID given by your experimenter. Participant IDs should only consist of alphanumeric characters.</p>
+                    <p>The purpose of our research is to understand how advanced digital word processors users aged 18 – 30 yrs. old copy and paste text, and derive requirements for the design of novel interactive computational media that are intended to be useful to computer savvy young adults.</p>
+                    <p>Welcome! Please write your participant number ID given by your experimenter. Participant IDs should only consist of alphanumeric characters.</p>
                     <form class="form-inline" id="pid-form">
                         <div class="form-group">
                             <label for="pid">Participant ID</label>
@@ -60,11 +59,11 @@
                 $('#pid-form').submit(function (event) {
                     event.preventDefault();
                     var pid = $('#pid').val();
-                    if (pid) {
+                    if (pid && pid.match(/^P[0-9]+$/)) {
                         ACPToolKit.setCurrentParticipantId(pid);
                         window.location = 'questionnaire-pre.html';
                     } else {
-                        alert('Please enter a valid Participant ID (pid)!');
+                        alert('Please enter a valid Participant ID! (e.g. P01, P11, etc.)');
                     }
                 });
             });

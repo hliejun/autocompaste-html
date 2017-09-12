@@ -1,40 +1,40 @@
 {
     "experiments": [
-        { 
-            "technique": "AUTOCOMPASTE", 
+        {
+            "technique": "AUTOCOMPASTE",
             "granularity": "sentence",
             "data_file": "data/texts.json",
-            "stimuli": "What is acceptor atoms?" 
+            "stimuli": "What is acceptor atoms?"
         },
-        { 
-            "technique": "AUTOCOMPASTE", 
+        {
+            "technique": "AUTOCOMPASTE",
             "granularity": "paragraph",
             "data_file": "data/texts.json",
-            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage." 
+            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
         },
-        { 
-            "technique": "AUTOCOMPASTE", 
+        {
+            "technique": "AUTOCOMPASTE",
             "granularity": "phrase",
             "data_file": "data/texts.json",
-            "stimuli": "number of positive charges" 
+            "stimuli": "number of positive charges"
         },
-        { 
-            "technique": "TRADITIONAL", 
+        {
+            "technique": "TRADITIONAL",
             "granularity": "sentence",
             "data_file": "data/texts.json",
-            "stimuli": "What is acceptor atoms?" 
+            "stimuli": "What is acceptor atoms?"
         },
-        { 
-            "technique": "TRADITIONAL", 
+        {
+            "technique": "TRADITIONAL",
             "granularity": "paragraph",
             "data_file": "data/texts.json",
-            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage." 
+            "stimuli": "What is AC coupling? Circuit that passes an AC signal while blocking a DC voltage."
         },
-        { 
-            "technique": "TRADITIONAL", 
+        {
+            "technique": "TRADITIONAL",
             "granularity": "phrase",
             "data_file": "data/texts.json",
-            "stimuli": "number of positive charges" 
-        }        
+            "stimuli": "number of positive charges"
+        }
     ]
 }

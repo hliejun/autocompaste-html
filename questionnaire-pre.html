@@ -1,115 +1,445 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>CS4249 Assignment 1</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CS4249 Assignment 1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Welcome</a></li>
-                        <li class="active"><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
-                        <li><a href="instructions.html">Instructions</a></li>
-                        <li><a href="experiment.html">Experiment</a></li>
-                        <li><a href="questionnaire-post.html">Post Questionnaire</a></li>
-                    </ul>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Welcome</a></li>
+          <li class="active"><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
+          <li><a href="instructions.html">Instructions</a></li>
+          <li><a href="experiment.html">Experiment</a></li>
+          <li><a href="questionnaire-post.html">Post Questionnaire</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Pre-Experiment Questionnaire</h1>
+        <hr>
+        <p>Please tell us more about yourself: <span class="js-pid pid"></span></p>
+        <p><i>We will keep your information anonymised and confidential.</i></p>
+
+        <form id="pre-expt-form">
+          <br/>
+          <section>
+            <h3>Socio-behavioural Background</h3>
+            <hr>
+            <div class="form-group">
+              <label for="q1">Which age group do you belong to?</label>
+              <select class="form-control" name="q1">
+                  <option value="under 18">under 18 yrs old</option>
+                  <option value="18 to 25">18 to 25 yrs old</option>
+                  <option value="25 to 30">25 to 30 yrs old</option>
+                  <option value="30 to 35">30 to 35 yrs old</option>
+                  <option value="above 35">above 35 yrs old</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q2">What is your gender?</label>
+              <select class="form-control" name="q2">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Intersex">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q3">What is your handedness?</label>
+              <select class="form-control" name="q2">
+                  <option value="Left">Left-handed</option>
+                  <option value="Right">Right-handed</option>
+                  <option value="Ambidextrous">Ambidextrous</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q4">What is your education level?</label>
+              <select class="form-control" name="q4">
+                  <option value="Primary School">Primary School</option>
+                  <option value="GCE 'O' Levels">GCE 'O' Levels</option>
+                  <option value="GCE 'A' Levels">GCE 'A' Levels</option>
+                  <option value="Bachelor's Degree">Bachelor's Degree</option>
+                  <option value="Master's Degree">Master's Degree</option>
+                  <option value="PhD">PhD</option>
+                  <option value="Other">Other</option>
+                  <option value="None">None</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q5">Are you currently studying at National University of Singapore (NUS)?</label>
+              <div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" name="q5" id="optionsRadios1" value="radio1">
+                    Yes
+                  </label>
+                </div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" name="q5" id="optionsRadios2" value="radio2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="q6">If you are currently studying at NUS, which faculty do you belong to?</label>
+              <select class="form-control" name="q6">
+                  <option value="N.A">I AM NOT FROM NUS</option>
+                  <option value="ARTS & SOCIAL SCIENCES">ARTS & SOCIAL SCIENCES</option>
+                  <option value="BUSINESS">BUSINESS</option>
+                  <option value="COMPUTING">COMPUTING</option>
+                  <option value="CONTINUING & LIFELONG EDN">CONTINUING & LIFELONG EDN</option>
+                  <option value="DENTISTRY">DENTISTRY</option>
+                  <option value="DESIGN AND ENVIRONMENT">DESIGN AND ENVIRONMENT</option>
+                  <option value="DUKE-NUS MEDICAL SCHOOL">DUKE-NUS MEDICAL SCHOOL</option>
+                  <option value="ENGINEERING">ENGINEERING</option>
+                  <option value="JOINT MULTI-DISCIPLINARY PROGRAMMES">JOINT MULTI-DISCIPLINARY PROGRAMMES</option>
+                  <option value="LAW">LAW</option>
+                  <option value="LEE KUAN YEW PUBLIC POLICY">LEE KUAN YEW PUBLIC POLICY</option>
+                  <option value="NUS ENTERPRISE">NUS ENTERPRISE</option>
+                  <option value="NUS GRAD SCH FOR INTEGRATIVE SCI & ENGG	SCIENCE">NUS GRAD SCH FOR INTEGRATIVE SCI & ENGG SCIENCE</option>
+                  <option value="NUS SUBSIDIARIES">NUS SUBSIDIARIES</option>
+                  <option value="SAW SWEE HOCK PUBLIC HEALTH">SAW SWEE HOCK PUBLIC HEALTH</option>
+                  <option value="UNIVERSITY LEVEL RESEARCH INSTITUTES AND CENTRES">UNIVERSITY LEVEL RESEARCH INSTITUTES AND CENTRES</option>
+                  <option value="UNIVERSITY SCHOLARS PROGRAMME">UNIVERSITY SCHOLARS PROGRAMME</option>
+                  <option value="YALE-NUS COLLEGE">YALE-NUS COLLEGE</option>
+                  <option value="YONG LOO LIN MEDICINE">YONG LOO LIN MEDICINE</option>
+                  <option value="YONG SIEW TOH CONSERVATORY OF MUSIC">YONG SIEW TOH CONSERVATORY OF MUSIC</option>
+                  <option value="OTHERS">OTHERS</option>
+              </select>
+            </div>
+          </section>
+          <br/>
+          <section>
+            <h3>Technical Background</h3>
+            <hr>
+            <div class="form-group">
+              <label for="q7">From 1 (illiterate) to 5 (expert), rate your proficiency in using a computer:</label>
+                <div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q7" id="optionsRadios1" value="1">
+                      1
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q7" id="optionsRadios2" value="2">
+                      2
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q7" id="optionsRadios3" value="3">
+                      3
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q7" id="optionsRadios4" value="4">
+                      4
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q7" id="optionsRadios5" value="5">
+                      5
+                    </label>
+                  </div>
                 </div>
             </div>
-        </nav>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1>Pre-Experiment Questionnaire</h1>
-                    <hr>
-                    <p>This part of the interface collects whatever pre-experiment information. Please come up with a basic questionnaire to help you to gather participant information. The purpose of this questionnaire is to report the participant data and convince readers that you have picked an appropriate target user group and the result has certain generalizability.</p>
-
-                    <p>Please put all information needed for participant: <span class="js-pid pid"></span></p>
-
-                    <form id="pre-expt-form">
-                        <div class="form-group">
-                            <label for="q1">Question 1 - Text</label>
-                            <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
-                        </div>
-                        <div class="form-group">
-                            <label for="q2">Question 2 - Radio</label>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
-                                Radio response 1
-                              </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q2" id="optionsRadios2" value="radio2">
-                                Radio response 2
-                              </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="q3">Question 3 - Checkbox</label>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="q3" value="checkbox1">
-                                Checkbox response 1
-                              </label>
-                            </div>
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="q3" value="checkbox2">
-                                Checkbox response 2
-                              </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="q4">Question 4 - Select Options</label>
-                            <select class="form-control" name="q4">
-                                <option value="option1">Option response 1</option>
-                                <option value="option2">Option response 2</option>
-                                <option value="option3">Option response 3</option>
-                                <option value="option4">Option response 4</option>
-                                <option value="option1">Option response 5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="q5">Question 5 - Textarea</label>
-                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                    </form>
+            <div class="form-group">
+              <label for="q8">From 1 (never) to 5 (very often), how often do you use the menu items to perform copy-pasting:</label>
+                <div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q8" id="optionsRadios1" value="1">
+                      1
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q8" id="optionsRadios2" value="2">
+                      2
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q8" id="optionsRadios3" value="3">
+                      3
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q8" id="optionsRadios4" value="4">
+                      4
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q8" id="optionsRadios5" value="5">
+                      5
+                    </label>
+                  </div>
                 </div>
+            </div>
+            <div class="form-group">
+              <label for="q9">From 1 (never) to 5 (very often), how often do you use the keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V) to perform copy-pasting:</label>
+                <div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q9" id="optionsRadios1" value="1">
+                      1
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q9" id="optionsRadios2" value="2">
+                      2
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q9" id="optionsRadios3" value="3">
+                      3
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q9" id="optionsRadios4" value="4">
+                      4
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q9" id="optionsRadios5" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="q10">From 1 (I hate it) to 5 (I love it), indicate your preference for performing copy-pasting using menu items:</label>
+                <div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q10" id="optionsRadios1" value="1">
+                      1
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q10" id="optionsRadios2" value="2">
+                      2
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q10" id="optionsRadios3" value="3">
+                      3
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q10" id="optionsRadios4" value="4">
+                      4
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q10" id="optionsRadios5" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="q11">What is your biggest complaint on performing copy-pasting using menu items:</label>
+              <textarea class="form-control" id="q11" name="q11" placeholder="Type your complaints here... (Type 'N.A' if you have no complaints)"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q12">From 1 (I hate it) to 5 (I love it), indicate your preference for performing copy-pasting using keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V):</label>
+                <div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q12" id="optionsRadios1" value="1">
+                      1
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q12" id="optionsRadios2" value="2">
+                      2
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q12" id="optionsRadios3" value="3">
+                      3
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q12" id="optionsRadios4" value="4">
+                      4
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q12" id="optionsRadios5" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="q13">What is your biggest complaint on performing copy-pasting using keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V):</label>
+              <textarea class="form-control" id="q13" name="q13" placeholder="Type your complaints here... (Type 'N.A' if you have no complaints)"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q14">From 1 (not a chance) to 5 (definitely), rate how willing you are to learn and adapt to a new copy-pasting technique, if it exists:</label>
+                <div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q14" id="optionsRadios1" value="1">
+                      1
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q14" id="optionsRadios2" value="2">
+                      2
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q14" id="optionsRadios3" value="3">
+                      3
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q14" id="optionsRadios4" value="4">
+                      4
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="q14" id="optionsRadios5" value="5">
+                      5
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <label for="q15">Have you heard of AutoComPaste before?</label>
+              <div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" name="q15" id="optionsRadios1" value="radio1">
+                    Yes
+                  </label>
+                </div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" name="q15" id="optionsRadios2" value="radio2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="q16">Have you used AutoComPaste before?</label>
+              <div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" name="q16" id="optionsRadios1" value="radio1">
+                    Yes
+                  </label>
+                </div>
+                <div class="radio-inline">
+                  <label>
+                    <input type="radio" name="q16" id="optionsRadios2" value="radio2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+          <br/>
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="form-group">
+            <label for="q3">Question 3 - Checkbox</label>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="q3" value="checkbox1">
+                Checkbox response 1
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="q3" value="checkbox2">
+                Checkbox response 2
+              </label>
             </div>
         </div>
+        <div class="form-group">
+            <label for="q4">Question 4 - Select Options</label>
+            <select class="form-control" name="q4">
+                <option value="option1">Option response 1</option>
+                <option value="option2">Option response 2</option>
+                <option value="option3">Option response 3</option>
+                <option value="option4">Option response 4</option>
+                <option value="option1">Option response 5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="q5">Question 5 - Textarea</label>
+            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
+        </div> -->
 
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/DataStorage.js"></script>
-        <script src="js/ACPToolKit.js"></script>
-        <script src="js/main.js"></script>
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/DataStorage.js"></script>
+  <script src="js/ACPToolKit.js"></script>
+  <script src="js/main.js"></script>
 
-        <script>
-            $(function () {
-                $('#pre-expt-form').submit(function (event) {
-                    event.preventDefault();
-                    var formResponses = $(this).serializeArray();
-                    // Do your own form validation here.
-                    ACPToolKit.downloadFormData(formResponses, 'pre');
-                    window.location = 'instructions.html';
-                });
-            });
-        </script>
-    </body>
+  <script>
+    $(function() {
+      $('#pre-expt-form').submit(function(event) {
+        event.preventDefault();
+        var formResponses = $(this).serializeArray();
+        // Do your own form validation here.
+        ACPToolKit.downloadFormData(formResponses, 'pre');
+        window.location = 'instructions.html';
+      });
+    });
+  </script>
+</body>
+
 </html>
