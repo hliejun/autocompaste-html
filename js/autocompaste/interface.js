@@ -125,7 +125,7 @@ AutoComPaste.Interface = (function () {
                               cols: 40
                             });
 
-        //  For ACP mode, engine is passed into the interface. 
+        //  For ACP mode, engine is passed into the interface.
         //  Initialize the interface with the engine.
         if (privates.engine) {
           for (var text_title in privates.texts) {
@@ -158,18 +158,19 @@ AutoComPaste.Interface = (function () {
     };
 
     this._createWindowForText = function _createWindowForText (text_title) {
-      
+
       privates.wm.createWindow(text_title, 500, 400);
       privates.wm.setWindowTitle(text_title, text_title);
       privates.wm.setWindowContent(text_title,
         $(document.createElement('pre'))
           .append(privates.texts[text_title])
-          .css('white-space', 'pre-word')
+          .css('white-space', 'pre-wrap')
+          .css('word-break', 'break-word')
       );
 
       // Position the window randomly.
       //
-      // safety_bounds ensure that the window is at least some pixels within 
+      // safety_bounds ensure that the window is at least some pixels within
       // the boundaries of the display.
       var height_safety_bounds = privates.wm.getDisplayHeight()/1.5;
       var width_safety_bounds = privates.wm.getDisplayWidth()/5;
@@ -208,7 +209,7 @@ AutoComPaste.Interface = (function () {
         evs[i].apply(null, [event_data]);
       }
     };
-   
+
     /** Constructor */
     if (wm == undefined) {
       console.error("Interface: wm must be given");
@@ -229,7 +230,7 @@ AutoComPaste.Interface = (function () {
       console.error("Interface: texts_json must be of type String");
       return;
     }
-    
+
     console.log("Interface: starting using data url: " + texts_json);
 
     // Define private variables.
@@ -242,11 +243,11 @@ AutoComPaste.Interface = (function () {
     privates.events = { };
     privates.engine = engine;
     privates.wm = wm;
-    
+
     // Fetch all the texts.
     this._fetchTexts();
   }
 
   return Interface;
 
-}) (); 
+}) ();
