@@ -82,7 +82,6 @@ var ExperimentParser = (function() {
         }
       }
     }
-    console.log(experimentTrials);
     return experimentTrials;
   }
 

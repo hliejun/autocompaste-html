@@ -96,6 +96,7 @@
     var simpleArticles = {};
     var complexArticles = {};
 
+    // Need to introduce pre-trial, break timer and continue button here...
     function next() {
       if (currentTrial !== 0) {
         var trialResult = ACPToolKit.getCurrentTrialState();
@@ -119,9 +120,21 @@
       }
 
       if (currentTrial < totalNumberOfTrials) {
-        ACPToolKit.presentTrial(trialsData[currentTrial]);
-        currentTrial += 1;
-        $('.js-expt-current-trial').text(currentTrial);
+
+        // Introduce timer and timeout...
+        if (currentTrial !== 0 && currentTrial % Math.floor(totalNumberOfTrials / 4) === 0) {
+          alert("Let's take a 1-minute break here! I will let you know when to resume =)");
+          setTimeout(function () {
+            alert("Let's continue!");
+            ACPToolKit.presentTrial(trialsData[currentTrial]);
+            currentTrial += 1;
+            $('.js-expt-current-trial').text(currentTrial);
+          }, 60000);
+        } else {
+          ACPToolKit.presentTrial(trialsData[currentTrial]);
+          currentTrial += 1;
+          $('.js-expt-current-trial').text(currentTrial);
+        }
       } else {
         // Last trial completed
         ACPToolKit.downloadTrialResults(trialData);

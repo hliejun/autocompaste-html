@@ -1,6 +1,6 @@
 ## AutoComPaste HTML
 
-This repository consists of a basic experiment interface for conducting a copying and pasting experiment comparing two techniques: 1) AutoComPaste and 2) Traditional Copying and Pasting using keyboard shortcuts (Ctrl-C, Ctrl-V). You are to modify the code to suit your experimental design.
+This repository consists of a basic experiment interface for conducting a copying and pasting experiment comparing two techniques: 1) AutoComPaste and 2) Traditional Copying and Pasting using keyboard shortcuts (Ctrl-C, Ctrl-V).
 
 
 ## Installation
@@ -100,8 +100,6 @@ Path: `questionnaire-post.html`.
 
 Similar to the Pre-Experiment Questionnaire, in this screen, you will collect participants responses. However, unlike the Pre-Experiment Questionnaire, over here, you want to collect more qualitative and quantitative feedback about the tested techniques. Some of the typical questions include, personal preferences, any difficulties participants experienced in the experiment, and areas of improvement.
 
-Please design a basic post-experimental questionnaire to help you to provide more in-depth information about the trade-offs between the tested techniques.
-
 Upon clicking the Submit button, form responses on the page is serialized and CSV file containing the responses will be generated and available for downloading into the user's computer. The CSV file will be named `acp-<pid>-post.csv`.
 
 
@@ -115,6 +113,31 @@ At the bottom of the page there is JavaScript code written, to handle the user i
 
 **DO NOT** modify the names of the files as the file names are hardcoded in each page for navigation purposes.
 
+#### ExperimentParser.js
+ExperimentParser is responsible for generating trials based on the setup configuration details provided in `experiment.html`. It also performs random selection of stimuli from given set of articles, based on the corpus level and the granularity:
+
+- `getRandomPhrase(sourceText)`
+
+  **Returns:**
+  - `randomPhrase`: A subset of a random chosen sentence in the provided article text, consisting minimally 2 words.
+
+- `getRandomSentence(sourceText)`
+
+  **Returns:**
+  - `randomSentence`: A random sentence delimited by an ending punctuation (?, !, ., etc.).
+
+- `getRandomParagraph(sourceText)`
+
+  **Returns:**
+  - `randomParagraph`: A random paragraph delimited by a new line return carriage.
+
+- `getStimuli(textSource, granularity, articles)`
+
+  **Returns:**
+  - `stimuli`: A randomly chosen stimuli from a class of articles (based on corpus level), of the specified granularity.
+
+
+
 #### ACPToolKit.js
 
 Every page includes the library `ACPToolKit.js`, which provides some common utility functions that you will need for the experiment. `ACPToolKit.js` exposes the global variable `ACPToolKit` and has the following public functions:
@@ -126,58 +149,58 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 
 - `getCurrentParticipantId()`
 
-	**Returns:** 
+	**Returns:**
 	- `participant_id`: The current participant ID value.
-	
+
 	**Description:**
 
 	 If the participant ID has not been set, the user will be prompted to enter a string value.
-	
+
 - `clearParticipantId()`
-	
+
 	Clears the `localStorage` of the `pid` value.
 
 - `downloadFormData(formResponses, type)`
 
-	**Parameters:**	
+	**Parameters:**
 
 	- `formResponses`: An array of objects `{ name: <label>, value: <value>}`.
 	- `type`: A string that will be appended to the file name of the generated CSV.
-	
+
 	**Description:**
-	
+
 	This function generate a CSV file consisting of a row of headers and a row of values
 	from the array of objects passed in. The `name` keys of the objects will form the row 	of	headers and the `value` keys will form the row of values. This method is being used 	by the Pre-Experiment Questionnaire and Post-Experiment Questionnaire pages. A CSV file 	is generated that will be downloaded by the user's browser.
-	
+
 
 - `downloadTrialResults(data)`
 
-	**Parameters:**	
+	**Parameters:**
 
 	- `data`: A two-dimensional array where each element in the array should be a number or a string.
-	
+
 	**Description:**
-	
+
 	This function takes in a two-dimensional array that represents the trial results and 	generates a CSV file out of it. The header row has to be the first array in the two-dimensional array.
 
 - `presentTrial(options)`
 
-	**Parameters:**	
+	**Parameters:**
 
 	- `options`: An object that recognizes the following keys:
 		- `technique`: The technique for the current trial, either **"AUTOCOMPASTE"** or **"TRADITIONAL"**. The interface will enable/disable the AutoComPaste functionality.
 		- `granularity`: Level of granularity of the stimuli of the current trial. one of the three values **"sentence"**, **"phrase"**, or **"paragraph"**. Note that this value is only used to update the 			interface for displaying of the conditions.
 		- `data_file`: The path to a JSON file consisting of a data object. The format of the data object will be explained in detail later.
 		- `stimuli`: The stimuli for a trial. There is no checking done by `ACPToolkit.js` to ensure that the stimuli here is consistent with the `granularity` given above.
-	
+
 	**Description:**
-	
+
 	Upon invoking of this function, the experiment interface will be cleared and the Text Editor and Article windows will be showed. The number of windows being showed depends on the number of objects in the JSON file referenced by `data_file`. **Note:** This method is only available on the `experiment.html` page.
-	
+
 
 - `getCurrentTrialState()`
 
-	**Returns:**	
+	**Returns:**
 
 	- `options`: An object containing the following keys:
 		- `technique`: The `technique` value for the current trial.
@@ -188,12 +211,12 @@ Every page includes the library `ACPToolKit.js`, which provides some common util
 		- `end_time`: The ending time of the current trial, given in milliseconds since midnight 01 January, 1970 UTC.
 		- `duration`: The duration of the current trial, given in milliseconds.
 		- `user_response`: The text entered in the Text Editor window.
-	
+
 	**Description:**
-	
+
 	Returns the state of the current trial. This method has to called to retrieve the current trial's state before the next `presentTrial()` is called or else the data will be overwritten. **Note:** This method is only available on the `experiment.html` page.
 
-	
+
 #### Data Object File
 
 Paths to data object files are being passed into the `ACPToolKit.presentTrial()` method as one of the values. Each data object file has to have the following format, an array of objects with the keys `title` and `url`.
@@ -211,7 +234,7 @@ Paths to data object files are being passed into the `ACPToolKit.presentTrial()`
     ...
 ]
 ```
-    
+
 Each object in the array will be transformed into a window and displayed in the interface, with `title` corresponding to the window title and text content loaded from the file located at `url`. Refer to `data/texts.json` for an example of the data object file. Each article should be in the `.txt` format.
 
 
