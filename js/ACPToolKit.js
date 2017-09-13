@@ -47,7 +47,10 @@ var ACPToolKit = (function () {
             for (var j = 0; j < twoDiArray[i].length; ++j) {
                 twoDiArray[i][j] = '\"' + twoDiArray[i][j] + '\"';
             }
-            csvRows.push(twoDiArray[i].join(','));
+            // Changed separator to semi-colon for better text handling
+            // csvRows.push(twoDiArray[i].join(','));
+            csvRows.push(twoDiArray[i].join(';'));
+
         }
 
         var csvString = csvRows.join('\r\n');
@@ -84,6 +87,7 @@ var ACPToolKit = (function () {
 
             $('.js-expt-technique').text(options.technique);
             $('.js-expt-granularity').text(options.granularity);
+            $('.js-expt-corpus').text(options.corpus);
             $('.js-expt-stimuli').text(options.stimuli);
 
             // Clean up DOM
