@@ -3,14 +3,9 @@ var ExperimentParser = (function() {
 
   function getRandomPhrase(sourceText) {
     var sentence = getRandomSentence(sourceText).split(" ");
-    var randomStartIndex = 0;
+    var randomStartIndex = Math.floor(Math.random() * (sentence.length - 2));
     var minimalEndIndex = randomStartIndex + 2;
-    var randomEndIndex = sentence.length;
-    while (randomEndIndex - randomStartIndex === sentence.length) {
-      randomStartIndex = Math.floor(Math.random() * (sentence.length - 2));
-      minimalEndIndex = randomStartIndex + 2;
-      randomEndIndex =  minimalEndIndex + Math.floor(Math.random() * (sentence.length - minimalEndIndex));
-    }
+    var randomEndIndex =  minimalEndIndex + Math.floor(Math.random() * (sentence.length - minimalEndIndex));
     return sentence.slice(randomStartIndex, randomEndIndex).join(" ");
   }
 

@@ -1,13 +1,15 @@
-What is bandwidth? Width of the band of frequencies between the half power points.
+The little red hen found a seed. It was a little seed. The little red hen found a seed. It was a wheat seed.
 
-What is barrier potential? The natural difference of potential that exists across a forward biased pn junction.
+The little red hen found a seed. It was a wheat seed. The little red hen said, "Who will plant the seed?"
 
-What is base biasing? A method of biasing a BJT in which the bias voltage is supplied to the base by means of a resistor.
+The little red hen said, "Who will plant the seed?" The pig said, "Not I." The cat said, "Not I." The dog said, "Not I." The little red hen said, "I will."
 
-What is battery? A DC voltage source containing two or more cells that convert chemical energy to electrical energy.
+The little red hen said, "Who will cut the wheat?" The pig said, "Not I." The cat said, "Not I." The dog said, "Not I." The little red hen said, "I will then." And she did.
 
-What is binary? A number system having only two symbols, 0 and 1. A base 2 number system.
+The little red hen said, "Who will thresh the wheat?" The pig said, "Not I." The cat said, "Not I." The dog said, "Not I." The little red hen said, "I will then." And she did.
 
-What is bipolar junction transistor? (BJT), A three terminal device in which emitter to collector current is controlled by base current.
+The little red hen said, "Who will grind the wheat?" The pig said, "Not I." The cat said, "Not I." The dog said, "Not I." The little red hen said, "I will then." And she did.
 
-What is bistable multivibrator? A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch.
+The little red hen said, "Who will make the bread?" The pig said, "Not I." The cat said, "Not I." The dog said, "Not I." The little red hen said, "I will then." And she did.
+
+The little red hen said, "Who will eat the bread?" The pig said, "I will." The cat said, "I will." The dog said, "I will." The little red hen said, "You shall not eat the bread. I will eat it." And she did. The little red hen found a seed. It was a wheat seed. She said, "Who will plant the wheat? Who will cut the wheat? Who will thresh the wheat? Who will grind the wheat? Who will make the bread?" The pig said, "I will not." The cat said, "I will not." The dog said, "I will not." The little red hen said, "Then you shall not eat the bread."

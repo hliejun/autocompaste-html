@@ -1,26 +1,26 @@
 [
     {
-        "title": "Article 1",
-        "url": "data/articles/Article_1.txt"
+        "title": "Article 7",
+        "url": "data/articles/Article_7.txt"
     },
     {
-        "title": "Article 2",
-        "url": "data/articles/Article_2.txt"
+        "title": "Article 8",
+        "url": "data/articles/Article_8.txt"
     },
     {
-        "title": "Article 3",
-        "url": "data/articles/Article_3.txt"
+        "title": "Article 9",
+        "url": "data/articles/Article_9.txt"
     },
     {
-        "title": "Article 4",
-        "url": "data/articles/Article_4.txt"
+        "title": "Article 10",
+        "url": "data/articles/Article_10.txt"
     },
     {
-        "title": "Article 5",
-        "url": "data/articles/Article_5.txt"
+        "title": "Article 11",
+        "url": "data/articles/Article_11.txt"
     },
     {
-        "title": "Article 6",
-        "url": "data/articles/Article_6.txt"
+        "title": "Article 12",
+        "url": "data/articles/Article_12.txt"
     }
 ]

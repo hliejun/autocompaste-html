@@ -173,7 +173,6 @@
           pid = ACPToolKit.getCurrentParticipantId();
           configurations = setup.configurations;
           trialsData = ExperimentParser.getExperiments(pid, configurations, articles);
-          trialsData = setup.experiments;
           currentTrial = 0;
           totalNumberOfTrials = trialsData.length;
           $('.js-expt-num-trials').text(totalNumberOfTrials);
