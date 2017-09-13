@@ -6,19 +6,19 @@ var ExperimentParser = (function() {
     var randomStartIndex = Math.floor(Math.random() * (sentence.length - 2));
     var minimalEndIndex = randomStartIndex + 2;
     var randomEndIndex =  minimalEndIndex + Math.floor(Math.random() * (sentence.length - minimalEndIndex));
-    return sentence.slice(randomStartIndex, randomEndIndex).join(" ");
+    return sentence.slice(randomStartIndex, randomEndIndex).join(" ").replace(/(\r\n|\n|\r)/gm, "");
   }
 
   function getRandomSentence(sourceText) {
     var sentences = sourceText.match(/[^\.!\?]+[\.!\?]+/g);
     var randomIndex = Math.floor(Math.random() * sentences.length);
-    return sentences[randomIndex].trim();
+    return sentences[randomIndex].trim().replace(/(\r\n|\n|\r)/gm, "");
   }
 
   function getRandomParagraph(sourceText) {
     var paragraphs = sourceText.match(/[^\r\n]+/g);
     var randomIndex = Math.floor(Math.random() * paragraphs.length);
-    return paragraphs[randomIndex].trim();
+    return paragraphs[randomIndex].trim().replace(/(\r\n|\n|\r)/gm, "");
   }
 
   function getStimuli(textSource, granularity, articles) {

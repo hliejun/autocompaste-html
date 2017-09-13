@@ -42,7 +42,7 @@ var ACPToolKit = (function () {
     function arrayToCSV (twoDiArray, fileName) {
         //  http://stackoverflow.com/questions/17836273/export-javascript-data
         //  -to-csv-file-without-server-interaction
-        var csvRows = [];
+        var csvRows = ['sep=;'];
         for (var i = 0; i < twoDiArray.length; ++i) {
             for (var j = 0; j < twoDiArray[i].length; ++j) {
                 twoDiArray[i][j] = '\"' + twoDiArray[i][j] + '\"';
