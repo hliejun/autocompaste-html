@@ -269,10 +269,15 @@
       $('#post-expt-form').submit(function(event) {
         event.preventDefault();
         var formResponses = $(this).serializeArray();
-        // Do your own form validation here.
-        ACPToolKit.downloadFormData(formResponses, 'post');
-        ACPToolKit.clearAllData();
-        alert('Thank you for your participation!');
+        // Fixed size validation
+        if (formResponses.length !== 11) {
+          alert("Please ensure that all fields on the form are filled!");
+        } else {
+          alert('Thank you for your participation!');
+          ACPToolKit.downloadFormData(formResponses, 'post');
+          ACPToolKit.clearAllData();
+        }
+
       });
     });
   </script>
