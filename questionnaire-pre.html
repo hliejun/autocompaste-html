@@ -65,7 +65,7 @@
             </div>
             <div class="form-group">
               <label for="q3">What is your handedness?</label>
-              <select class="form-control" name="q2">
+              <select class="form-control" name="q3">
                   <option value="Left">Left-handed</option>
                   <option value="Right">Right-handed</option>
                   <option value="Ambidextrous">Ambidextrous</option>
@@ -405,7 +405,7 @@
         event.preventDefault();
         var formResponses = $(this).serializeArray();
         // Fixed size validation
-        if (formResponses.length !== 13) {
+        if (formResponses.length !== 16) {
           alert("Please ensure that all fields on the form are filled!");
         } else {
           ACPToolKit.downloadFormData(formResponses, 'pre');
