@@ -1,3 +1,5 @@
+<!-- TODO: Review questionnaires and update question label if necessary -->
+
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -269,6 +271,9 @@
       $('#post-expt-form').submit(function(event) {
         event.preventDefault();
         var formResponses = $(this).serializeArray();
+
+        /* TODO: Implement better validation */
+        
         // Fixed size validation
         if (formResponses.length !== 11) {
           alert("Please ensure that all fields on the form are filled!");

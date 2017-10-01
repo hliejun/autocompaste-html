@@ -62,6 +62,13 @@
         "granularities": ["paragraph", "phrase", "sentence"],
         "corpora": ["large", "small"]
       }
-    ]
+    ],
+    "preTrialCondition": {
+      "technique": "AUTOCOMPASTE",
+      "granularity": "phrase",
+      "corpus": "small",
+      "data_file": "data/simple_texts.json",
+      "stimuli": "to do everything I can"
+    }
   }
 }

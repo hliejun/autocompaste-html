@@ -1,97 +1,297 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>CS4249 Assignment 1</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Welcome</a></li>
-                        <li><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
-                        <li class="active"><a href="instructions.html">Instructions</a></li>
-                        <li><a href="experiment.html">Experiment</a></li>
-                        <li><a href="questionnaire-post.html">Post Questionnaire</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1>Instructions</h1>
-                    <hr>
-                    <p>Dear participant <span class="js-pid pid"></span>, thanks again for agreeing to participate in this experiment.
-                    <p>Please take note of the following instructions on how to use this interface for the experiment, as well as the procedures involved.<p>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>CS4249 Assignment 1</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
 
-                    <br/>
+<body>
 
-                    <h3>Interface</h3>
-                    <hr>
-                    <p>After this instruction page, you will be testing out 2 types of copy-pasting techniques, namely: <p>
-                    <ul>
-                      <li>Keyboard Shortcuts</li>
-                      <li>AutoComPaste</li>
-                    </ul>
+  <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-                    <img src="img/layout.png" class="img-responsive"/>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Welcome</a></li>
+          <li><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
+          <li class="active"><a href="instructions.html">Instructions</a></li>
+          <li><a href="experiment.html">Experiment</a></li>
+          <li><a href="questionnaire-post.html">Post Questionnaire</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                    <p>On the screen, you will see the trial features, followed by the instructions to copy-paste a certain text using the specified technique.</p>
-                    <p>On the main canvas, you will observe multiple article windows, each filled with some text. Your objective is to locate the specified text (in red, on left panel) among the articles, either by visually scanning for a highlighted text (in yellow), or by typing in the editor window for a dropdown of suggestions.</p>
-                    <p>Please note that the former (finding the highlighted text) is reserved for the keyboard shortcut copy-pasting technique, and the latter is only available when you are copy-pasting using the AutoComPaste technique.</p>
-                    <p>Once you are done, click the "Next Task" button (in blue, on the left panel) to proceed to the next page.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1>Instructions</h1>
+        <hr>
+        <p>
+          Dear participant <span class="js-pid pid"></span>, thank you for agreeing to participate in this experiment.
+        </p>
+        <p>
+          After this instruction page, you will be testing out 2 types of copy-pasting techniques, namely:
+        </p>
+        <ul>
+          <li>Keyboard Shortcuts</li>
+          <li>AutoComPaste</li>
+        </ul>
+        <p>
+          The following instructions will brief you on your objective, the copy-pasting techniques, the experiment structure and how to use the experiment interface.
+        </p>
+        <br/>
 
-                    <br/>
+        <h3>Objectives</h3>
+        <hr>
+        <p>
+          The experiment aims to assess the usability of the 2 copy-pasting techniques. Your objectives would be to:
+        </p>
+        <ul>
+          <li>
+            For every trial, copy-paste the text in the red box (stimuli) into the text editor
+          </li>
+          <li>
+            Perform copy-pasting using both techniques for a total of 72 trials
+          </li>
+          <li>
+            Use the techniques as per normal, being honest with us of their usability
+          </li>
+          <li>
+            Adhere to the instructive prompts along the experiment, and clarify with us anything that you're uncertain with
+          </li>
+        </ul>
+        <br/>
 
-                    <h3>Structure Of Trials</h3>
-                    <p>After every 18 questions (the end of a series of trials on a single technique), you will be required to take a 1-minute break. After which, you will repeat the technique-series again. This will repeat for a second technique, which brings it to 3 break intervals and 72 trial questions.</p>
-                    <p>You may notice that at some point in the trial, you will be asked to copy different length of text, or that the articles have changed to a different set. This is part of our experiment on different factors affecting the copy-pasting experience.</p>
-                    <p>After the trials, you will be required to fill up a post-experiment questionnaire! It will help us tremendously to give your honest input on our experiment!</p>
+        <h3>Copy-Paste Techniques</h3>
+        <hr>
+        <p><b>Keyboard Shortcut</b></p>
+        <p><i>insert photo</i></p>
+        <br/>
+        <ol>
+          <li>Search for the text stimuli across the 6 articles on display.</li>
+          <li>
+            Using your mouse, highlight or select the text you wish to copy.
+          </li>
+          <li>
+            Press <kbd>CTRL</kbd> + <kbd>C</kbd> (Windows) or <kbd>CMD</kbd> + <kbd>C</kbd> (Mac) to copy the selected text.
+          </li>
+          <li>
+            Select the editor window to bring it to focus.
+          </li>
+          <li>
+            Press <kbd>CTRL</kbd> + <kbd>V</kbd> (Windows) or <kbd>CMD</kbd> + <kbd>V</kbd> (Mac) to paste the copied text.
+          </li>
+        </ol>
+        <br/>
+        <p><b>AutoComPaste</b></p>
+        <p><i>insert photo</i></p>
+        <br/>
+        <ol>
+          <li>Select the editor window to bring it to focus.</li>
+          <li>Start typing the stimuli text as displayed in the red box.</li>
+          <li>
+            From the dropdown window, select the correct suggestion that matches with the text stimuli. This will auto-fill the editor window with the selected list item.
+          </li>
+          <li>
+            Modify the auto-filled text if necessary.
+          </li>
+        </ol>
+        <br/>
 
-                    <br/>
+        <h3>Experiment Structure</h3>
+        <hr>
+        <p>
+          You will be following the following sequence of agenda:
+        </p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Event</th>
+              <th>Quantity</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>I</td>
+              <td>Technique A trials</td>
+              <td>18 trials</td>
+              <td>
+                Varied conditions, familiarizing you with technique A
+              </td>
+            </tr>
+            <tr>
+              <td>II</td>
+              <td>Break</td>
+              <td>1 minute</td>
+              <td>
+                Rest and review technique A
+              </td>
+            </tr>
+            <tr>
+              <td>III</td>
+              <td>Technique A trials (repeat)</td>
+              <td>18 trials</td>
+              <td>
+                Apply what you've learnt from the previous set of trials
+              </td>
+            </tr>
+            <tr>
+              <td>IV</td>
+              <td>Break</td>
+              <td>1 minute</td>
+              <td>
+                Rest and prepare to change technique
+              </td>
+            </tr>
+            <tr>
+              <td>V</td>
+              <td>Technique B trials</td>
+              <td>18 trials</td>
+              <td>
+                Varied conditions, familiarizing you with technique B
+              </td>
+            </tr>
+            <tr>
+              <td>VI</td>
+              <td>Break</td>
+              <td>1 minute</td>
+              <td>
+                Rest and review technique B
+              </td>
+            </tr>
+            <tr>
+              <td>VII</td>
+              <td>Technique B trials (repeat)</td>
+              <td>18 trials</td>
+              <td>
+                Apply what you've learnt from the previous set of trials
+              </td>
+            </tr>
+            <tr>
+              <td>VIII</td>
+              <td>Post Experiment Questionnaire</td>
+              <td>11 questions</td>
+              <td>
+                Please give us your honest feedbacks on the techniques as well as the conduct of the experiment!
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br/>
 
-                    <h3>How-To Use Copy-Paste Techniques</h3>
-                    <p><b>Keyboard Shortcut</b></p>
-                    <p>Using your mouse, select the text you wish to copy, then press (<kbd>CTRL</kbd> or <kbd>CMD</kbd>) + <kbd>C</kbd>. Then, select the editor space and press (<kbd>CTRL</kbd> or <kbd>CMD</kbd>) + <kbd>V</kbd>.</p>
-                    <p><b>AutoComPaste</b></p>
-                    <p>Select the editor space, then proceed to type the stimuli text prompted in red. You will then observe a dropdown of suggested text. Take your pick and modify if necessary.</p>
+        <h3>Experiment Interface</h3>
+        <hr>
 
-                    <br/>
+        <!-- TODO: Change image to GIF, and add more images -->
 
-                    <form class="form-inline">
-                        <button type="submit" class="btn btn-primary btn-lg">Next</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <!-- <img src="img/layout.png" class="img-responsive" /> -->
+        <p><i>insert photo</i></p>
+        <br/>
 
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/DataStorage.js"></script>
-        <script src="js/ACPToolKit.js"></script>
-        <script src="js/main.js"></script>
+        <p>
+          The experiment interface comprises of the following elements:
+        </p>
+        <br/>
 
-        <script>
-            $(function () {
-                $('form').submit(function (event) {
-                    event.preventDefault();
-                    window.location = 'experiment.html';
-                });
-            });
-        </script>
-    </body>
+        <p><b>Navigation Bar</b></p>
+        <p><i>insert photo</i></p>
+        <p>
+          The navigation bar allows you to skip to the instructions or questionnaire pages. However, once you leave the experiment page without completing the trials, you'd have to re-do the experiment.
+        </p>
+        <br/>
+
+        <p><b>Side Bar</b></p>
+        <p><i>insert photo</i></p>
+        <p>
+          The side bar comprises of the following features:
+        </p>
+        <ol>
+          <li>Trial State</li>
+          <p>
+            The trial state table indicates the values of the independent variables that are tested for the current trial session. Please take note of the technique specified for use and adhere to it.
+          </p>
+          <li>Instructions</li>
+          <p>
+            The instructions will advise you on the technique to use for the trial, and the text that you're to copy, also known as the stimuli. You'll also be instructed to take a 1-minute break after every 18 trials.
+          </p>
+          <li>Stimuli</li>
+          <p>
+            The stimuli is the specific text you're to copy into the editor from one of the articles. The stimuli is labelled in a red box, and also highlighted (in yellow) in the article window. Be advised that you're not allowed to copy the text directly from the
+            red stimuli box. Instead, you're to do so in the display area.
+          </p>
+          <li>Action Button</li>
+          <p>
+            When you've completed a trial, you may click the action button to proceed to the next trial. During breaks, the action button will be disabled. Instead, you'll automatically be advanced to the next trial after the break.
+          </p>
+        </ol>
+        <br/>
+
+        <p><b>Display Area</b></p>
+        <p><i>insert photo</i></p>
+        <p>
+          The display area comprises of the following features:
+        </p>
+        <ol>
+          <li>Text Editor</li>
+          <p>
+            The text editor is a resizeable window where you'll perform the copy-pasting of the stimuli or target text. When you're expected to use AutoComPaste, you'll see a dropdown list of suggestions as you type. Otherwise, you're to paste your text here using
+            keyboard shortcuts.
+          </p>
+          <li>Article Windows</li>
+          <p>
+            Article windows are draggable, scrollable windows that contain an article each. For every trial, you'll observe 6 articles on display. If you're using the traditional copy-pasting technique, you'd have to find the article with the stimuli text, highlighted
+            in yellow.
+          </p>
+          <li>Break Timer</li>
+          <p>
+            During breaks, article windows will be hidden. Instead, you'll see a countdown timer to the end of the 1-minute break.
+          </p>
+        </ol>
+        <br/>
+
+        <p><b>Alerts</b></p>
+        <p><i>insert photo</i></p>
+        <p>
+          Before and after every break, you'll observe an interruptive pop-up that informs you of the start or end of the break.
+        </p>
+        <br/>
+
+        <form class="form-inline">
+          <button type="submit" class="btn btn-primary btn-lg">Next</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor/jquery-1.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/DataStorage.js"></script>
+  <script src="js/ACPToolKit.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(function() {
+      $('form').submit(function(event) {
+        event.preventDefault();
+        window.location = 'experiment.html';
+      });
+    });
+  </script>
+</body>
+
 </html>

@@ -64,15 +64,20 @@ var ExperimentParser = (function() {
       pIndex = 0;
     }
     var pConditions = configurations.conditions[pIndex];
+    // Vary IV #1: Technique
     for (var techniqueIndex in pConditions.techniques) {
       var technique = pConditions.techniques[techniqueIndex];
+      // Repeat for every technique [#blocks] times
       for (var block = 1; block <= blocks; block++) {
+        // Vary IV #2: Granularity
         for (var granularityIndex in pConditions.granularities) {
           var granularity = pConditions.granularities[granularityIndex];
+          // Vary IV #3: Corpus
           for (var corpusIndex in pConditions.corpora) {
             var corpus = pConditions.corpora[corpusIndex];
             var textSource = articlesObj[corpus].source;
             var corpusArticles = articlesObj[corpus].articles;
+            // Randomly select stimuli for every trial
             for (var trial = 1; trial <= trials; trial++) {
               var stimuli = getStimuli(textSource, granularity, corpusArticles);
               var trialConditions = getTrial(technique, granularity, corpus, textSource, stimuli);
@@ -82,8 +87,15 @@ var ExperimentParser = (function() {
         }
       }
     }
+    // Add pre-trial
+    if (configurations.preTrialCondition) {
+      experimentTrials.unshift(configurations.preTrialCondition);
+    } else {
+      experimentTrials.unshift({});
+    }
+    console.log(experimentTrials);
     return experimentTrials;
-  }
+  };
 
   return module;
 })();
