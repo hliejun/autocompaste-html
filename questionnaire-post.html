@@ -1,5 +1,3 @@
-<!-- TODO: Review questionnaires and update question label if necessary -->
-
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -17,9 +15,11 @@
 </head>
 
 <body>
+
   <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="collapse navbar-collapse">
@@ -28,7 +28,9 @@
           <li><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
           <li><a href="instructions.html">Instructions</a></li>
           <li><a href="experiment.html">Experiment</a></li>
-          <li class="active"><a href="questionnaire-post.html">Post Questionnaire</a></li>
+          <li class="active">
+            <a href="questionnaire-post.html">Post Questionnaire</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -39,9 +41,14 @@
       <div class="col-md-8 col-md-offset-2">
         <h1>Post-Experiment Questionnaire</h1>
         <hr>
-        <p>We're almost done! Thanks for staying with us so far! Having experienced the AutoComPaste copy-pasting technique, we would like you to share with us your insights.</p>
-        <p>Current participant: <span class="js-pid pid"></span></p>
+        <p>
+          We're almost done! Thanks for staying with us so far! Having experienced the AutoComPaste copy-pasting technique, we would like you to share with us your insights.
+        </p>
+        <p>
+          Current participant: <span class="js-pid pid"></span>
+        </p>
         <p><i>We will keep your information anonymised and confidential.</i></p>
+        <br/>
 
         <form id="post-expt-form">
 
@@ -49,7 +56,9 @@
             <h3>Technical Insights</h3>
             <hr>
             <div class="form-group">
-              <label for="q1">From 1 (poor) to 5 (excellent), rate the ease of performing copy-pasting using keyboard shortcuts: </label>
+              <label for="q1">
+                From 1 (poor) to 5 (excellent), rate the ease of performing copy-pasting using keyboard shortcuts:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -84,7 +93,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q2">From 1 (poor) to 5 (excellent), rate the ease of performing copy-pasting using AutoComPaste: </label>
+              <label for="q2">
+                From 1 (poor) to 5 (excellent), rate the ease of performing copy-pasting using AutoComPaste:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -119,7 +130,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q3">From 1 (not a chance) to 5 (definitely), rate how willing you are to use AutoComPaste in place of your current preferred technique: </label>
+              <label for="q3">
+                From 1 (not a chance) to 5 (definitely), rate how willing you are to use AutoComPaste in place of your current preferred technique:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -154,7 +167,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q4">From 1 (difficult) to 5 (easy), rate the learnability of AutoComPaste: </label>
+              <label for="q4">
+                From 1 (difficult) to 5 (easy), rate the learnability of AutoComPaste:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -189,24 +204,33 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q5">If you have decided to stick with keyboard shortcuts, please state your reason: </label>
+              <label for="q5">
+                If you have decided to stick with keyboard shortcuts, please state your reason:
+              </label>
               <textarea class="form-control" id="q5" name="q5" placeholder="Why keyboard shortcuts? (Type N.A if you decided to go for AutoComPaste)"></textarea>
             </div>
             <div class="form-group">
-              <label for="q6">If you have decided to change to AutoComPaste, please state your reason: </label>
+              <label for="q6">
+                If you have decided to change to AutoComPaste, please state your reason:
+              </label>
               <textarea class="form-control" id="q6" name="q6" placeholder="Why AutoComPaste? (Type N.A if you decided to stick with keyboard shortcuts)"></textarea>
             </div>
             <div class="form-group">
-              <label for="q7">How do you think the new AutoComPaste technique can be improved? </label>
+              <label for="q7">
+                How do you think the new AutoComPaste technique can be improved?
+              </label>
               <textarea class="form-control" id="q7" name="q7" placeholder="Improvements for AutoComPaste..."></textarea>
             </div>
           </section>
+          <br/>
 
           <section>
             <h3>Administrative Insights</h3>
             <hr>
             <div class="form-group">
-              <label for="q8">From 1 (poor) to 5 (excellent), rate the conduct of the experiment: </label>
+              <label for="q8">
+                From 1 (poor) to 5 (excellent), rate the conduct of the experiment:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -241,18 +265,25 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q9">Did you face any difficulties during the experiment? </label>
+              <label for="q9">
+                Did you face any difficulties during the experiment?
+              </label>
               <textarea class="form-control" id="q9" name="q9" placeholder="Problems you've encountered..."></textarea>
             </div>
             <div class="form-group">
-              <label for="q10">How may the experiment or the investigator improve? </label>
+              <label for="q10">
+                How may the experiment or the investigator improve?
+              </label>
               <textarea class="form-control" id="q10" name="q10" placeholder="Improvements..."></textarea>
             </div>
             <div class="form-group">
-              <label for="q11">Any other feedback(s)? </label>
+              <label for="q11">
+                Any other feedback(s)?
+              </label>
               <textarea class="form-control" id="q11" name="q11" placeholder="Feedbacks... (Type N.A if no other feedbacks)"></textarea>
             </div>
           </section>
+          <br/>
           <br/>
           <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>
@@ -271,9 +302,6 @@
       $('#post-expt-form').submit(function(event) {
         event.preventDefault();
         var formResponses = $(this).serializeArray();
-
-        /* TODO: Implement better validation */
-        
         // Fixed size validation
         if (formResponses.length !== 11) {
           alert("Please ensure that all fields on the form are filled!");
@@ -282,7 +310,6 @@
           ACPToolKit.downloadFormData(formResponses, 'post');
           ACPToolKit.clearAllData();
         }
-
       });
     });
   </script>

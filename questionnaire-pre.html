@@ -1,5 +1,3 @@
-<!-- TODO: Review questionnaires and update question label if necessary -->
-
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -17,15 +15,19 @@
 </head>
 
 <body>
+
   <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="index.html">Welcome</a></li>
-          <li class="active"><a href="questionnaire-pre.html">Pre Questionnaire</a></li>
+          <li class="active">
+            <a href="questionnaire-pre.html">Pre Questionnaire</a>
+          </li>
           <li><a href="instructions.html">Instructions</a></li>
           <li><a href="experiment.html">Experiment</a></li>
           <li><a href="questionnaire-post.html">Post Questionnaire</a></li>
@@ -39,9 +41,14 @@
       <div class="col-md-8 col-md-offset-2">
         <h1>Pre-Experiment Questionnaire</h1>
         <hr>
-        <p>Hey there! Really grateful to have you onboard! Before we proceed to the instructions and experiment, we hope to find out about your background.</p>
-        <p>Please tell us more about yourself: <span class="js-pid pid"></span></p>
+        <p>
+          Before we proceed to the instructions and experiment, we hope to find out about your background.
+        </p>
+        <p>
+          Please tell us more about yourself: <span class="js-pid pid"></span>
+        </p>
         <p><i>We will keep your information anonymised and confidential.</i></p>
+        <br/>
 
         <form id="pre-expt-form">
           <section>
@@ -87,7 +94,9 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="q5">Are you currently studying at National University of Singapore (NUS)?</label>
+              <label for="q5">
+                Are you currently studying at National University of Singapore (NUS)?
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -106,27 +115,53 @@
             <div class="form-group">
               <label for="q6">If you are currently studying at NUS, which faculty do you belong to?</label>
               <select class="form-control" name="q6">
-                  <option value="N.A">I AM NOT FROM NUS</option>
-                  <option value="ARTS & SOCIAL SCIENCES">ARTS & SOCIAL SCIENCES</option>
+                  <option value="N.A">
+                    I AM NOT FROM NUS
+                  </option>
+                  <option value="ARTS & SOCIAL SCIENCES">
+                    ARTS & SOCIAL SCIENCES
+                  </option>
                   <option value="BUSINESS">BUSINESS</option>
                   <option value="COMPUTING">COMPUTING</option>
-                  <option value="CONTINUING & LIFELONG EDN">CONTINUING & LIFELONG EDN</option>
+                  <option value="CONTINUING & LIFELONG EDN">
+                    CONTINUING & LIFELONG EDN
+                  </option>
                   <option value="DENTISTRY">DENTISTRY</option>
-                  <option value="DESIGN AND ENVIRONMENT">DESIGN AND ENVIRONMENT</option>
-                  <option value="DUKE-NUS MEDICAL SCHOOL">DUKE-NUS MEDICAL SCHOOL</option>
+                  <option value="DESIGN AND ENVIRONMENT">
+                    DESIGN AND ENVIRONMENT
+                  </option>
+                  <option value="DUKE-NUS MEDICAL SCHOOL">
+                    DUKE-NUS MEDICAL SCHOOL
+                  </option>
                   <option value="ENGINEERING">ENGINEERING</option>
-                  <option value="JOINT MULTI-DISCIPLINARY PROGRAMMES">JOINT MULTI-DISCIPLINARY PROGRAMMES</option>
+                  <option value="JOINT MULTI-DISCIPLINARY PROGRAMMES">
+                    JOINT MULTI-DISCIPLINARY PROGRAMMES
+                  </option>
                   <option value="LAW">LAW</option>
-                  <option value="LEE KUAN YEW PUBLIC POLICY">LEE KUAN YEW PUBLIC POLICY</option>
+                  <option value="LEE KUAN YEW PUBLIC POLICY">
+                    LEE KUAN YEW PUBLIC POLICY
+                  </option>
                   <option value="NUS ENTERPRISE">NUS ENTERPRISE</option>
-                  <option value="NUS GRAD SCH FOR INTEGRATIVE SCI & ENGG	SCIENCE">NUS GRAD SCH FOR INTEGRATIVE SCI & ENGG SCIENCE</option>
+                  <option value="NUS GRAD SCH FOR INTEGRATIVE SCI & ENGG	SCIENCE">
+                    NUS GRAD SCH FOR INTEGRATIVE SCI & ENGG SCIENCE
+                  </option>
                   <option value="NUS SUBSIDIARIES">NUS SUBSIDIARIES</option>
-                  <option value="SAW SWEE HOCK PUBLIC HEALTH">SAW SWEE HOCK PUBLIC HEALTH</option>
-                  <option value="UNIVERSITY LEVEL RESEARCH INSTITUTES AND CENTRES">UNIVERSITY LEVEL RESEARCH INSTITUTES AND CENTRES</option>
-                  <option value="UNIVERSITY SCHOLARS PROGRAMME">UNIVERSITY SCHOLARS PROGRAMME</option>
+                  <option value="SAW SWEE HOCK PUBLIC HEALTH">
+                    SAW SWEE HOCK PUBLIC HEALTH
+                  </option>
+                  <option value="UNIVERSITY LEVEL RESEARCH INSTITUTES AND CENTRES">
+                    UNIVERSITY LEVEL RESEARCH INSTITUTES AND CENTRES
+                  </option>
+                  <option value="UNIVERSITY SCHOLARS PROGRAMME">
+                    UNIVERSITY SCHOLARS PROGRAMME
+                  </option>
                   <option value="YALE-NUS COLLEGE">YALE-NUS COLLEGE</option>
-                  <option value="YONG LOO LIN MEDICINE">YONG LOO LIN MEDICINE</option>
-                  <option value="YONG SIEW TOH CONSERVATORY OF MUSIC">YONG SIEW TOH CONSERVATORY OF MUSIC</option>
+                  <option value="YONG LOO LIN MEDICINE">
+                    YONG LOO LIN MEDICINE
+                  </option>
+                  <option value="YONG SIEW TOH CONSERVATORY OF MUSIC">
+                    YONG SIEW TOH CONSERVATORY OF MUSIC
+                  </option>
                   <option value="OTHERS">OTHERS</option>
               </select>
             </div>
@@ -136,7 +171,9 @@
             <h3>Technical Background</h3>
             <hr>
             <div class="form-group">
-              <label for="q7">From 1 (illiterate) to 5 (expert), rate your proficiency in using a computer:</label>
+              <label for="q7">
+                From 1 (illiterate) to 5 (expert), rate your proficiency in using a computer:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -171,7 +208,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q8">From 1 (never) to 5 (very often), how often do you use the menu items to perform copy-pasting:</label>
+              <label for="q8">
+                From 1 (never) to 5 (very often), how often do you use the menu items to perform copy-pasting:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -206,7 +245,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q9">From 1 (never) to 5 (very often), how often do you use the keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V) to perform copy-pasting:</label>
+              <label for="q9">
+                From 1 (never) to 5 (very often), how often do you use the keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V) to perform copy-pasting:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -241,7 +282,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q10">From 1 (I hate it) to 5 (I love it), indicate your preference for performing copy-pasting using menu items:</label>
+              <label for="q10">
+                From 1 (I hate it) to 5 (I love it), indicate your preference for performing copy-pasting using menu items:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -276,11 +319,15 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q11">What is your biggest complaint on performing copy-pasting using menu items:</label>
+              <label for="q11">
+                What is your biggest complaint on performing copy-pasting using menu items:
+              </label>
               <textarea class="form-control" id="q11" name="q11" placeholder="Type your complaints here... (Type 'N.A' if you have no complaints)"></textarea>
             </div>
             <div class="form-group">
-              <label for="q12">From 1 (I hate it) to 5 (I love it), indicate your preference for performing copy-pasting using keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V):</label>
+              <label for="q12">
+                From 1 (I hate it) to 5 (I love it), indicate your preference for performing copy-pasting using keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V):
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -315,11 +362,15 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q13">What is your biggest complaint on performing copy-pasting using keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V):</label>
+              <label for="q13">
+                What is your biggest complaint on performing copy-pasting using keyboard shortcuts (Ctrl/Cmd + C, Ctrl/Cmd + V):
+              </label>
               <textarea class="form-control" id="q13" name="q13" placeholder="Type your complaints here... (Type 'N.A' if you have no complaints)"></textarea>
             </div>
             <div class="form-group">
-              <label for="q14">From 1 (not a chance) to 5 (definitely), rate how willing you are to learn and adapt to a new copy-pasting technique, if it exists:</label>
+              <label for="q14">
+                From 1 (not a chance) to 5 (definitely), rate how willing you are to learn and adapt to a new copy-pasting technique, if it exists:
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -354,7 +405,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q15">Have you heard of AutoComPaste before?</label>
+              <label for="q15">
+                Have you heard of AutoComPaste before?
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -371,7 +424,9 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="q16">Have you used AutoComPaste before?</label>
+              <label for="q16">
+                Have you used AutoComPaste before?
+              </label>
               <div>
                 <div class="radio-inline">
                   <label>
@@ -388,6 +443,7 @@
               </div>
             </div>
           </section>
+          <br/>
           <br/>
           <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>
@@ -406,9 +462,6 @@
       $('#pre-expt-form').submit(function(event) {
         event.preventDefault();
         var formResponses = $(this).serializeArray();
-
-        /* TODO: Implement better validation */
-
         // Fixed size validation
         if (formResponses.length !== 16) {
           alert("Please ensure that all fields on the form are filled!");
