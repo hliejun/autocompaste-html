@@ -11,13 +11,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-
-<!-- TODO: Reduce text size and fix button position -->
-
-<!-- TODO: Style timer -->
-
 
 <body class="experiment-page">
 
@@ -41,68 +37,61 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-3">
-        <h1>Copy-Paste Experiment</h1>
-        <hr>
-
-        <!-- Start of sidebar content -->
-
-        <table class="table table-bordered js-expt-table">
-          <tbody>
-            <tr>
-              <td>Technique</td>
-              <td><span class="js-expt-technique">ACP</span></td>
-            </tr>
-            <tr>
-              <td>Granularity</td>
-              <td><span class="js-expt-granularity">Phrase</span></td>
-            </tr>
-            <tr>
-              <td>Vocabulary Size</td>
-              <td><span class="js-expt-corpus">???</span></td>
-            </tr>
-            <tr>
-              <td>Trial</td>
-              <td>
-                <span class="js-expt-current-trial"></span>
-                /
-                <span class="js-expt-num-trials"></span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="js-expt-instructions" id="trial-instructions">
-          <p>
-            Please copy-paste the following
-            <span class="js-expt-granularity">phrase</span> using the
-            <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.
-          </p>
-          <div id="stimuli" class="alert alert-danger js-expt-stimuli">This is a long stimuli!</div>
-          <p id="pretrial-instructions" style="display: none;">
-            This is a pre-trial. Once you are ready hit the Begin! button to commence trials.
-          </p>
+      <div class="col-md-3" id="sidebar">
+        <div id="sidebar-header">
+          <h2>Copy-Paste Experiment</h2>
+          <hr>
         </div>
-        <div id="break-instructions" style="display: none;">
-          <p>
-            Please rest for a minute before we continue with the next phase of trials. We will alert you when it's time to continue.
-          </p>
+        <div id="sidebar-content">
+          <table class="table table-bordered js-expt-table">
+            <tbody>
+              <tr>
+                <td>Technique</td>
+                <td><span class="js-expt-technique">ACP</span></td>
+              </tr>
+              <tr>
+                <td>Granularity</td>
+                <td><span class="js-expt-granularity">Phrase</span></td>
+              </tr>
+              <tr>
+                <td>Vocabulary Size</td>
+                <td><span class="js-expt-corpus">???</span></td>
+              </tr>
+              <tr>
+                <td>Trial</td>
+                <td>
+                  <span class="js-expt-current-trial"></span> /
+                  <span class="js-expt-num-trials"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="js-expt-instructions" id="trial-instructions">
+            <p>
+              Please copy-paste the following
+              <span class="js-expt-granularity">phrase</span> using the
+              <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.
+            </p>
+            <div id="stimuli" class="alert alert-danger js-expt-stimuli">This is a long stimuli!</div>
+            <p id="pretrial-instructions" style="display: none;">
+              This is a pre-trial. Once you are ready hit the 'Begin' button to commence trials.
+            </p>
+          </div>
+          <div id="break-instructions" style="display: none;">
+            <p>
+              Please rest for a minute before we continue with the next phase of trials. We will alert you when it's time to continue.
+            </p>
+          </div>
         </div>
-        <button class="btn btn-primary btn-lg js-expt-action-button" onclick="next()">Next Task</button>
-
-        <!-- End of sidebar -->
-
+        <div id="sidebar-footer">
+          <button id="action-button" class="btn btn-primary btn-md js-expt-action-button" onclick="next()">Next Task</button>
+        </div>
       </div>
       <div id="autocompaste" class="col-sm-9">
-
-        <!-- Start of main display area -->
-
         <div id="autocompaste-display"></div>
         <div id="autocompaste-timer" style="display: none;">
-          <div id="timer"></div>
+          <h1 id="timer"></h1>
         </div>
-
-        <!-- End of main display area -->
-
       </div>
     </div>
   </div>

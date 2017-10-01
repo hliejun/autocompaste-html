@@ -2,6 +2,9 @@ var trialConditions;
 var currentTrial;
 var totalNumOfTrials;
 var pid;
+var timer;
+var startTime;
+var endTime;
 
 var trialData = [];
 var requests = [];
@@ -85,7 +88,7 @@ function next() {
     currentTrial += 1;
     ACPToolKit.presentTrial(trialConditions[currentTrial]);
     $('.js-expt-current-trial').text("Pre-Trial");
-    $('.js-expt-action-button').text("Begin!");
+    $('.js-expt-action-button').text("Begin");
     $('#pretrial-instructions').css('display', 'block');
 
   // Current state is completed: Prompt download of trials result
@@ -98,26 +101,36 @@ function next() {
     alert("Let's take a 1-minute break here.\nI will let you know when to resume.");
     $('.js-expt-action-button').prop('disabled', true);
 
-    var end = new Date(new Date().getTime() + 60000);
+    endTime = new Date();
+    endTime = new Date(endTime.getTime() + 60000);
+
+    var timer = setInterval(function() {
+        var currentTime = new Date();
+        var seconds = Math.round((endTime - currentTime) / 1000);
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+        if (seconds <= 0) {
+          seconds = "00";
+        }
+        $('#timer').text("00:" + seconds);
+    }, 1000);
 
     setTimeout(function() {
       alert("1-minute is up!\nLet's continue.");
       initiateTrial();
       $('.js-expt-action-button').prop('disabled', false);
-      $('#autocompaste-timer').css('display', 'none');
       $('#autocompaste-display').css('display', 'block');
-      $('#break-instructions').css('display', 'none');
       $('#trial-instructions').css('display', 'block');
+      $('#autocompaste-timer').css('display', 'none');
+      $('#break-instructions').css('display', 'none');
+      clearInterval(timer);
     }, 60000);
 
-    $('#autocompaste-display').css('display', 'none');
-    $('#autocompaste-timer').css('display', 'block');
+    $('#autocompaste-timer').css('display', 'flex');
     $('#break-instructions').css('display', 'block');
+    $('#autocompaste-display').css('display', 'none');
     $('#trial-instructions').css('display', 'none');
-
-    setInterval(function() {
-        $('#timer').text(Math.round((end - new Date) / 1000) + " seconds left");
-    }, 1000);
 
   // Current state is trial: Set trial UI, continue trial
   } else {

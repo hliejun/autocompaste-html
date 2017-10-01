@@ -1,14 +1,15 @@
-/*
-  TODO: Add styling for various components
-*/
+/* TODO: Modify styling for various components */
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 75%;
+  height: 100%;
   margin-bottom: 40px;
 }
 
 body.experiment-page {
-  margin-bottom: 0;
+  margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .pid {
@@ -30,6 +31,7 @@ body.experiment-page {
 
 #autocompaste {
   background-color: #ccc;
+  height: -webkit-fill-available;
   margin: 0;
   padding: 0;
 }
@@ -119,6 +121,19 @@ body.experiment-page {
   color: #333333;
 }
 
+#autocompaste-timer {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  justify-content: center;
+  width: -webkit-fill-available;
+}
+
+#timer {
+  font-size: 10em;
+  text-align: center;
+}
+
 /* Error overlay styles */
 #error-overlay {
   background: rgba(0, 0, 0, 0.8);
@@ -133,6 +148,26 @@ body.experiment-page {
 
 #error-overlay .modal-dialog {
   margin-top: 100px;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  overflow-y: scroll;
+}
+
+#sidebar-header {
+  flex: none;
+}
+
+#sidebar-content {
+  flex: 1;
+}
+
+#sidebar-footer {
+  flex: none;
+  padding-bottom: 15px;
 }
 
 #stimuli {
