@@ -1,8 +1,8 @@
-/* TODO: Modify styling for various components */
-
 body {
+  background-color: #393E46;
+  color: #EEEEEE;
   font-family: "Roboto", sans-serif;
-  font-size: 75%;
+  font-size: 85%;
   height: 100%;
   margin-bottom: 40px;
 }
@@ -12,8 +12,28 @@ body.experiment-page {
   overflow: hidden;
 }
 
+kbd {
+  background-color: #0092CA;
+}
+
+textarea {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #333;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.btn-primary {
+  background-color: #0092CA;
+}
+
 .pid {
-  color: red;
+  color: #F38181;
   font-weight: bold;
 }
 
@@ -21,8 +41,33 @@ body.experiment-page {
   height: 20px;
 }
 
+.navbar-default .navbar-nav > li > a {
+  color: #EEEEEE;
+}
+
 .navbar {
+  background-color: #0092CA;
+  border: 0;
+  border-radius: 0;
   margin-bottom: 0;
+}
+
+.gif-large, .img-large {
+  display: block;
+  margin: 0 auto;
+  width: 640px;
+}
+
+.img-small {
+  display: inline-block;
+  float: right;
+  width: 260px;
+  margin: 20px;
+}
+
+.well {
+  background-color: #222831;
+  border: 0;
 }
 
 /**
@@ -30,7 +75,7 @@ body.experiment-page {
  */
 
 #autocompaste {
-  background-color: #ccc;
+  background-color: #ACBDC5;
   height: -webkit-fill-available;
   margin: 0;
   padding: 0;
@@ -130,6 +175,7 @@ body.experiment-page {
 }
 
 #timer {
+  color: #393E46;
   font-size: 10em;
   text-align: center;
 }

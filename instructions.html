@@ -62,7 +62,7 @@
         </p>
         <ul>
           <li>
-            For every trial, copy-paste the text in the red box (stimuli) into the text editor
+            For every trial, copy-paste the text in the blue box (stimuli) into the text editor
           </li>
           <li>
             Perform copy-pasting using both techniques for a total of 72 trials
@@ -78,9 +78,10 @@
 
         <h3>Copy-Paste Techniques</h3>
         <hr>
-        <p><b>Keyboard Shortcut</b></p>
-        <p><i>insert photo</i></p>
         <br/>
+        <img src="img/traditional.gif" class="gif-large"/>
+        <br/>
+        <p><h4>Keyboard Shortcut</h4></p>
         <ol>
           <li>Search for the text stimuli across the 6 articles on display.</li>
           <li>
@@ -97,12 +98,14 @@
           </li>
         </ol>
         <br/>
-        <p><b>AutoComPaste</b></p>
-        <p><i>insert photo</i></p>
         <br/>
+        <br/>
+        <img src="img/autocompaste.gif" class="gif-large"/>
+        <br/>
+        <p><h4>AutoComPaste</h4></p>
         <ol>
           <li>Select the editor window to bring it to focus.</li>
-          <li>Start typing the stimuli text as displayed in the red box.</li>
+          <li>Start typing the stimuli text as displayed in the blue box.</li>
           <li>
             From the dropdown window, select the correct suggestion that matches with the text stimuli. This will auto-fill the editor window with the selected list item.
           </li>
@@ -117,7 +120,7 @@
         <p>
           You will be following the following sequence of agenda:
         </p>
-        <table class="table table-striped">
+        <table class="table table-bordered">
           <thead>
             <tr>
               <th>Phase</th>
@@ -197,80 +200,88 @@
 
         <h3>Experiment Interface</h3>
         <hr>
-
-        <!-- TODO: Change image to GIF, and add more images -->
-
-        <!-- <img src="img/layout.png" class="img-responsive" /> -->
-        <p><i>insert photo</i></p>
+        <br/>
+        <img src="img/interface.png" class="img-large"/>
+        <br/>
         <br/>
 
-        <p>
-          The experiment interface comprises of the following elements:
-        </p>
-        <br/>
+        <div class="well">
+          <p><h4>Navigation Bar</h4></p>
+          <br/>
+          <img src="img/navbar.png" class="img-large"/>
+          <br/>
+          <p>
+            The navigation bar allows you to skip to the instructions or questionnaire pages. However, once you leave the experiment page without completing the trials, you'd have to re-do the experiment.
+          </p>
+          <br/>
+        </div>
 
-        <p><b>Navigation Bar</b></p>
-        <p><i>insert photo</i></p>
-        <p>
-          The navigation bar allows you to skip to the instructions or questionnaire pages. However, once you leave the experiment page without completing the trials, you'd have to re-do the experiment.
-        </p>
-        <br/>
+        <div class="well">
+          <p><h4>Side Bar</h4></p>
+          <br/>
+          <img src="img/sidebar.png" class="img-small"/>
+          <p>
+            The side bar comprises of the following features:
+          </p>
+          <ol>
+            <li>Trial State</li>
+            <p>
+              The trial state table indicates the values of the independent variables that are tested for the current trial session. Please take note of the technique specified for use and adhere to it.
+            </p>
+            <li>Instructions</li>
+            <p>
+              The instructions will advise you on the technique to use for the trial, and the text that you're to copy, also known as the stimuli. You'll also be instructed to take a 1-minute break after every 18 trials.
+            </p>
+            <li>Stimuli</li>
+            <p>
+              The stimuli is the specific text you're to copy into the editor from one of the articles. The stimuli is labelled in a blue box, and also highlighted (in yellow) in the article window. Be advised that you're not allowed to copy the text directly from the
+              blue stimuli box. Instead, you're to do so in the display area.
+            </p>
+            <li>Action Button</li>
+            <p>
+              When you've completed a trial, you may click the action button to proceed to the next trial. During breaks, the action button will be disabled. Instead, you'll automatically be advanced to the next trial after the break.
+            </p>
+          </ol>
+          <br/>
+        </div>
 
-        <p><b>Side Bar</b></p>
-        <p><i>insert photo</i></p>
-        <p>
-          The side bar comprises of the following features:
-        </p>
-        <ol>
-          <li>Trial State</li>
+        <div class="well">
+          <p><h4>Display Area</h4></p>
+          <br/>
+          <img src="img/display.png" class="img-large"/>
+          <br/>
           <p>
-            The trial state table indicates the values of the independent variables that are tested for the current trial session. Please take note of the technique specified for use and adhere to it.
+            The display area comprises of the following features:
           </p>
-          <li>Instructions</li>
-          <p>
-            The instructions will advise you on the technique to use for the trial, and the text that you're to copy, also known as the stimuli. You'll also be instructed to take a 1-minute break after every 18 trials.
-          </p>
-          <li>Stimuli</li>
-          <p>
-            The stimuli is the specific text you're to copy into the editor from one of the articles. The stimuli is labelled in a red box, and also highlighted (in yellow) in the article window. Be advised that you're not allowed to copy the text directly from the
-            red stimuli box. Instead, you're to do so in the display area.
-          </p>
-          <li>Action Button</li>
-          <p>
-            When you've completed a trial, you may click the action button to proceed to the next trial. During breaks, the action button will be disabled. Instead, you'll automatically be advanced to the next trial after the break.
-          </p>
-        </ol>
-        <br/>
+          <ol>
+            <li>Text Editor</li>
+            <p>
+              The text editor is a resizeable window where you'll perform the copy-pasting of the stimuli or target text. When you're expected to use AutoComPaste, you'll see a dropdown list of suggestions as you type. Otherwise, you're to paste your text here using
+              keyboard shortcuts.
+            </p>
+            <li>Article Windows</li>
+            <p>
+              Article windows are draggable, scrollable windows that contain an article each. For every trial, you'll observe 6 articles on display. If you're using the traditional copy-pasting technique, you'd have to find the article with the stimuli text, highlighted
+              in yellow.
+            </p>
+            <li>Break Timer</li>
+            <p>
+              During breaks, article windows will be hidden. Instead, you'll see a countdown timer to the end of the 1-minute break.
+            </p>
+          </ol>
+          <br/>
+        </div>
 
-        <p><b>Display Area</b></p>
-        <p><i>insert photo</i></p>
-        <p>
-          The display area comprises of the following features:
-        </p>
-        <ol>
-          <li>Text Editor</li>
+        <div class="well">
+          <p><h4>Alerts</h4></p>
+          <br/>
+          <img src="img/alert.png" class="img-large"/>
+          <br/>
           <p>
-            The text editor is a resizeable window where you'll perform the copy-pasting of the stimuli or target text. When you're expected to use AutoComPaste, you'll see a dropdown list of suggestions as you type. Otherwise, you're to paste your text here using
-            keyboard shortcuts.
+            Before and after every break, you'll observe an interruptive pop-up that informs you of the start or end of the break.
           </p>
-          <li>Article Windows</li>
-          <p>
-            Article windows are draggable, scrollable windows that contain an article each. For every trial, you'll observe 6 articles on display. If you're using the traditional copy-pasting technique, you'd have to find the article with the stimuli text, highlighted
-            in yellow.
-          </p>
-          <li>Break Timer</li>
-          <p>
-            During breaks, article windows will be hidden. Instead, you'll see a countdown timer to the end of the 1-minute break.
-          </p>
-        </ol>
-        <br/>
-
-        <p><b>Alerts</b></p>
-        <p><i>insert photo</i></p>
-        <p>
-          Before and after every break, you'll observe an interruptive pop-up that informs you of the start or end of the break.
-        </p>
-        <br/>
+          <br/>
+        </div>
 
         <form class="form-inline">
           <button type="submit" class="btn btn-primary btn-lg">Next</button>

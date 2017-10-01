@@ -107,11 +107,10 @@ function next() {
     var timer = setInterval(function() {
         var currentTime = new Date();
         var seconds = Math.round((endTime - currentTime) / 1000);
-        if (seconds < 10) {
-          seconds = "0" + seconds;
-        }
         if (seconds <= 0) {
           seconds = "00";
+        } else if (seconds < 10) {
+          seconds = "0" + seconds;
         }
         $('#timer').text("00:" + seconds);
     }, 1000);
