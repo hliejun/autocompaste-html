@@ -299,12 +299,24 @@
   <script src="js/main.js"></script>
 
   <script>
+
+    // Checks that all fields are filled
+    function hasEmptyField(response) {
+      for (var entry in response) {
+        var value = response[entry].value;
+        if (!value) {
+          return true;
+        }
+      }
+      return false;
+    }
+
     $(function() {
       $('#post-expt-form').submit(function(event) {
         event.preventDefault();
         var formResponses = $(this).serializeArray();
         // Fixed size validation
-        if (formResponses.length !== 11) {
+        if (formResponses.length !== 11 || hasEmptyField(formResponses)) {
           alert("Please ensure that all fields on the form are filled!");
         } else {
           alert('Thank you for your participation!');
@@ -313,6 +325,7 @@
         }
       });
     });
+
   </script>
 </body>
 

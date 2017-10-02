@@ -101,13 +101,13 @@
               <div>
                 <div class="radio-inline">
                   <label>
-                    <input type="radio" name="q5" id="optionsRadios1" value="radio1">
+                    <input type="radio" name="q5" id="optionsRadios1" value="Yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio-inline">
                   <label>
-                    <input type="radio" name="q5" id="optionsRadios2" value="radio2">
+                    <input type="radio" name="q5" id="optionsRadios2" value="No">
                     No
                   </label>
                 </div>
@@ -412,13 +412,13 @@
               <div>
                 <div class="radio-inline">
                   <label>
-                    <input type="radio" name="q15" id="optionsRadios1" value="radio1">
+                    <input type="radio" name="q15" id="optionsRadios1" value="Yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio-inline">
                   <label>
-                    <input type="radio" name="q15" id="optionsRadios2" value="radio2">
+                    <input type="radio" name="q15" id="optionsRadios2" value="No">
                     No
                   </label>
                 </div>
@@ -431,13 +431,13 @@
               <div>
                 <div class="radio-inline">
                   <label>
-                    <input type="radio" name="q16" id="optionsRadios1" value="radio1">
+                    <input type="radio" name="q16" id="optionsRadios1" value="Yes">
                     Yes
                   </label>
                 </div>
                 <div class="radio-inline">
                   <label>
-                    <input type="radio" name="q16" id="optionsRadios2" value="radio2">
+                    <input type="radio" name="q16" id="optionsRadios2" value="No">
                     No
                   </label>
                 </div>
@@ -459,12 +459,24 @@
   <script src="js/main.js"></script>
 
   <script>
+
+    // Checks that all fields are filled
+    function hasEmptyField(response) {
+      for (var entry in response) {
+        var value = response[entry].value;
+        if (!value) {
+          return true;
+        }
+      }
+      return false;
+    }
+
     $(function() {
       $('#pre-expt-form').submit(function(event) {
         event.preventDefault();
         var formResponses = $(this).serializeArray();
         // Fixed size validation
-        if (formResponses.length !== 16) {
+        if (formResponses.length !== 16 || hasEmptyField(formResponses)) {
           alert("Please ensure that all fields on the form are filled!");
         } else {
           ACPToolKit.downloadFormData(formResponses, 'pre');
@@ -472,6 +484,7 @@
         }
       });
     });
+
   </script>
 </body>
 
